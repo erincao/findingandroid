@@ -20,12 +20,17 @@ import os
 from google.appengine.ext import ndb
 from google.appengine.api import users
 
-jinja_environment = jinja2.Environment(loader=
-    jinja2.FileSystemLoader(os.path.dirname(__file__)))
+JINJA_ENVIRONMENT = jinja2.Environment(
+    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
+    extensions=['jinja2.ext.autoescape'],
+    autoescape=True)
 
+<<<<<<< HEAD
 def redirect_play():
     self.redirect("/play")
 
+=======
+>>>>>>> 4a0eeab248790272d9c8361a6dfda1212a5d7347
 class Player(ndb.Model):
     user = ndb.StringProperty(required = True)
     level = ndb.IntegerProperty(required = True)
@@ -36,6 +41,7 @@ player1.put()
 
 class WelcomeHandler(webapp2.RequestHandler):
     def get(self):
+<<<<<<< HEAD
         welcome_template = jinja_environment.get_template("templates/welcome.html")
         self.response.out.write(welcome_template.render())
 
@@ -57,6 +63,11 @@ class PlayHandler(webapp2.RequestHandler):
 #                         users.create_login_url('/'))
 #
 #         self.response.out.write('<html><body>%s</body></html>' % greeting)
+=======
+        #self.response.write('Hello world!')
+        template = JINJA_ENVIRONMENT.get_template('index.html')
+        self.response.write(template.render())
+>>>>>>> 4a0eeab248790272d9c8361a6dfda1212a5d7347
 
 
 
