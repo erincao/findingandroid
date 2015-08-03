@@ -48,7 +48,7 @@ class WelcomeHandler(webapp2.RequestHandler):
 
 class PlayHandler(webapp2.RequestHandler):
     def get (self):
-        play_template = jinja_environment.get_template("templates/play.html")
+        play_template = JINJA_ENVIRONMENT.get_template("templates/play.html")
         self.response.out.write(play_template.render())
 
 #
