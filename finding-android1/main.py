@@ -46,10 +46,32 @@ class WelcomeHandler(webapp2.RequestHandler):
         self.response.out.write(welcome_template.render())
 
 
-class PlayHandler(webapp2.RequestHandler):
+class Level_1_Handler(webapp2.RequestHandler):
     def get (self):
-        play_template = JINJA_ENVIRONMENT.get_template("templates/play.html")
-        self.response.out.write(play_template.render())
+        level_1_template = JINJA_ENVIRONMENT.get_template("templates/level1.html")
+        self.response.out.write(level_1_template.render())
+
+
+class Level_2_Handler(webapp2.RequestHandler):
+    def get (self):
+        level_2_template = JINJA_ENVIRONMENT.get_template("templates/level2.html")
+        self.response.out.write(level_2_template.render())
+
+class Level_3_Handler(webapp2.RequestHandler):
+    def get (self):
+        level_3_template = JINJA_ENVIRONMENT.get_template("templates/level3.html")
+        self.response.out.write(level_3_template.render())
+
+
+class Level_4_Handler(webapp2.RequestHandler):
+    def get (self):
+        level_4_template = JINJA_ENVIRONMENT.get_template("templates/level4.html")
+        self.response.out.write(level_4_template.render())
+
+class Level_5_Handler(webapp2.RequestHandler):
+    def get (self):
+        level_5_template = JINJA_ENVIRONMENT.get_template("templates/level5.html")
+        self.response.out.write(level_5_template.render())
 
 #
 # class LoginHandler(webapp2.RequestHandler):
@@ -72,6 +94,10 @@ class PlayHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-    ('/play', PlayHandler),
+    ('/level_1', Level_1_Handler),
+    ('/level_2', Level_2_Handler),
+    ('/level_3', Level_3_Handler),
+    ('/level_4', Level_4_Handler),
+    ('/level_5', Level_5_Handler),
     ('/', WelcomeHandler)
 ], debug=True)
