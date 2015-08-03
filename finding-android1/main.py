@@ -15,14 +15,17 @@
 # limitations under the License.
 #
 import webapp2
-from google.appengine.ext import ndb
 import jinja2
 import os
+from google.appengine.ext import ndb
+from google.appengine.api import users
 
 jinja_environment = jinja2.Environment(loader=
     jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
-#template = jinja_environment.get_template('templates/hello.html')
+def redirect_play():
+    self.redirect("/play")
+
 class Player(ndb.Model):
     user = ndb.StringProperty(required = True)
     level = ndb.IntegerProperty(required = True)
@@ -31,12 +34,33 @@ class Player(ndb.Model):
 player1 = Player (user = "James", level = 1, attempts = 1)
 player1.put()
 
-class MainHandler(webapp2.RequestHandler):
+class WelcomeHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        welcome_template = jinja_environment.get_template("templates/welcome.html")
+        self.response.out.write(welcome_template.render())
+
+
+class PlayHandler(webapp2.RequestHandler):
+    def get (self):
+        play_template = jinja_environment.get_template("templates/play.html")
+        self.response.out.write(play_template.render())
+
+#
+# class LoginHandler(webapp2.RequestHandler):
+#     def get(self):
+#         user = users.get_current_user()
+#         if user:
+#             greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
+#                         (user.nickname(), users.create_logout_url('/')))
+#         else:
+#             greeting = ('<a href="%s">Sign in or register</a>.' %
+#                         users.create_login_url('/'))
+#
+#         self.response.out.write('<html><body>%s</body></html>' % greeting)
 
 
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/play', PlayHandler),
+    ('/', WelcomeHandler)
 ], debug=True)
