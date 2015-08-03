@@ -15,10 +15,27 @@
 # limitations under the License.
 #
 import webapp2
+from google.appengine.ext import ndb
+import jinja2
+import os
+
+jinja_environment = jinja2.Environment(loader=
+    jinja2.FileSystemLoader(os.path.dirname(__file__)))
+
+#template = jinja_environment.get_template('templates/hello.html')
+class Player(ndb.Model):
+    user = ndb.StringProperty(required = True)
+    level = ndb.IntegerProperty(required = True)
+    attempts = ndb.IntegerProperty(required = True)
+
+player1 = Player (user = "James", level = 1, attempts = 1)
+player1.put()
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
+
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
