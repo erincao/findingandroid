@@ -25,12 +25,9 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-#<<<<<<< HEAD
 def redirect_play():
     self.redirect("/play")
 
-#=======
-#>>>>>>> 4a0eeab248790272d9c8361a6dfda1212a5d7347
 class Player(ndb.Model):
     user = ndb.StringProperty(required = True)
     level = ndb.IntegerProperty(required = True)
@@ -41,7 +38,6 @@ player1.put()
 
 class WelcomeHandler(webapp2.RequestHandler):
     def get(self):
-#<<<<<<< HEAD
         welcome_template = JINJA_ENVIRONMENT.get_template("templates/welcome.html")
         self.response.out.write(welcome_template.render())
 
@@ -61,7 +57,6 @@ class Level_3_Handler(webapp2.RequestHandler):
     def get (self):
         level_3_template = JINJA_ENVIRONMENT.get_template("templates/level3.html")
         self.response.out.write(level_3_template.render())
-
 
 class Level_4_Handler(webapp2.RequestHandler):
     def get (self):
@@ -87,17 +82,15 @@ class Level_5_Handler(webapp2.RequestHandler):
 #         self.response.out.write('<html><body>%s</body></html>' % greeting)
 #=======
         #self.response.write('Hello world!')
-        template = JINJA_ENVIRONMENT.get_template('index.html')
-        self.response.write(template.render())
+        # template = JINJA_ENVIRONMENT.get_template('index.html')
+        # self.response.write(template.render())
 #>>>>>>> 4a0eeab248790272d9c8361a6dfda1212a5d7347
 
-
-
 app = webapp2.WSGIApplication([
+    ('/', WelcomeHandler),
     ('/level_1', Level_1_Handler),
     ('/level_2', Level_2_Handler),
     ('/level_3', Level_3_Handler),
     ('/level_4', Level_4_Handler),
-    ('/level_5', Level_5_Handler),
-    ('/', WelcomeHandler)
+    ('/level_5', Level_5_Handler)
 ], debug=True)
