@@ -39,6 +39,7 @@ class UserModel(ndb.Model):
 
 class WelcomeHandler(webapp2.RequestHandler):
     def get(self):
+<<<<<<< HEAD
         user = users.get_current_user()
         if user:
             self.response.write(user)
@@ -46,6 +47,16 @@ class WelcomeHandler(webapp2.RequestHandler):
             user.put()
         else:
             self.redirect(users.create_login_url(self.request.url))
+=======
+        # user = users.get_current_user()
+        # if user:
+        #     self.response.write(user)
+        #     user = UserModel(currentUser = user.user_id(), text="hey")
+        #     user.put()
+        # else:
+        #     self.redirect(user.create_login_url(self.request.url))
+
+>>>>>>> 6a30ceae5b9783bd3a3fe0d535fb7eb08c7b95db
         welcome_template = JINJA_ENVIRONMENT.get_template("templates/welcome.html")
         self.response.out.write(welcome_template.render())
 
