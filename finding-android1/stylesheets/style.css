@@ -7,6 +7,22 @@
     height: 2em;
 }
 
+h1{
+  text-align: center;
+}
+
+p{
+  text-align: center;
+}
+
+.header{
+  text-align: center;
+}
+
+.levels{
+  text-align: center;
+}
+
 .button {
     background-color: #000000;
     color: #FFFFFF;
