@@ -28,19 +28,26 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 def redirect_play():
     self.redirect("/play")
 
-class Player(ndb.Model):
-    user = ndb.StringProperty(required = True)
-    level = ndb.IntegerProperty(required = True)
-    attempts = ndb.IntegerProperty(required = True)
+class UserModel(ndb.Model):
+    currentUser = ndb.StringProperty()
+    level = ndb.IntegerProperty()
+    attempts = ndb.IntegerProperty()
+    text = ndb.StringProperty()
 
-player1 = Player (user = "James", level = 1, attempts = 1)
-player1.put()
+# # user1 = UserModel (currentUser = "James", level = 1, attempts = 1)
+# user1.put()
 
 class WelcomeHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        if user:
+            self.response.write(user)
+            user = UserModel(currentUser = user.user_id(), text= "hey")
+            user.put()
+        else:
+            self.redirect(users.create_login_url(self.request.url))
         welcome_template = JINJA_ENVIRONMENT.get_template("templates/welcome.html")
         self.response.out.write(welcome_template.render())
-
 
 class Level_1_Handler(webapp2.RequestHandler):
     def get (self):
@@ -68,19 +75,8 @@ class Level_5_Handler(webapp2.RequestHandler):
         level_5_template = JINJA_ENVIRONMENT.get_template("templates/level5.html")
         self.response.out.write(level_5_template.render())
 
-#
-# class LoginHandler(webapp2.RequestHandler):
-#     def get(self):
-#         user = users.get_current_user()
-#         if user:
-#             greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
-#                         (user.nickname(), users.create_logout_url('/')))
-#         else:
-#             greeting = ('<a href="%s">Sign in or register</a>.' %
-#                         users.create_login_url('/'))
-#
-#         self.response.out.write('<html><body>%s</body></html>' % greeting)
-#=======
+
+
         #self.response.write('Hello world!')
         # template = JINJA_ENVIRONMENT.get_template('index.html')
         # self.response.write(template.render())
