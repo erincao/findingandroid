@@ -41,8 +41,8 @@ class WelcomeHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
         if user:
-            self.response.write(user)
-            user = UserModel(currentUser = user.user_id(), text= "hey")
+            #self.response.write(user)
+            user = UserModel(currentUser = user.user_id())
             user.put()
         else:
             self.redirect(users.create_login_url(self.request.url))
