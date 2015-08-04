@@ -15,31 +15,89 @@
 # limitations under the License.
 #
 import webapp2
-from google.appengine.ext import ndb
 import jinja2
 import os
+from google.appengine.ext import ndb
+from google.appengine.api import users
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-class Player(ndb.Model):
-    user = ndb.StringProperty(required = True)
-    level = ndb.IntegerProperty(required = True)
-    attempts = ndb.IntegerProperty(required = True)
+def redirect_play():
+    self.redirect("/play")
 
-player1 = Player (user = "James", level = 1, attempts = 1)
-player1.put()
+class UserModel(ndb.Model):
+    currentUser = ndb.StringProperty()
+    level = ndb.IntegerProperty()
+    attempts = ndb.IntegerProperty()
+    text = ndb.StringProperty()
 
-class MainHandler(webapp2.RequestHandler):
+# # user1 = UserModel (currentUser = "James", level = 1, attempts = 1)
+# user1.put()
+
+class WelcomeHandler(webapp2.RequestHandler):
     def get(self):
+<<<<<<< HEAD
+        user = users.get_current_user()
+        if user:
+            self.response.write(user)
+            user = UserModel(currentUser = user.user_id(), text= "hey")
+            user.put()
+        else:
+            self.redirect(users.create_login_url(self.request.url))
+=======
+        # user = users.get_current_user()
+        # if user:
+        #     self.response.write(user)
+        #     user = UserModel(currentUser = user.user_id(), text="hey")
+        #     user.put()
+        # else:
+        #     self.redirect(user.create_login_url(self.request.url))
+
+>>>>>>> 6a30ceae5b9783bd3a3fe0d535fb7eb08c7b95db
+        welcome_template = JINJA_ENVIRONMENT.get_template("templates/welcome.html")
+        self.response.out.write(welcome_template.render())
+
+class Level_1_Handler(webapp2.RequestHandler):
+    def get (self):
+        level_1_template = JINJA_ENVIRONMENT.get_template("templates/level1.html")
+        self.response.out.write(level_1_template.render())
+
+
+class Level_2_Handler(webapp2.RequestHandler):
+    def get (self):
+        level_2_template = JINJA_ENVIRONMENT.get_template("templates/level2.html")
+        self.response.out.write(level_2_template.render())
+
+class Level_3_Handler(webapp2.RequestHandler):
+    def get (self):
+        level_3_template = JINJA_ENVIRONMENT.get_template("templates/level3.html")
+        self.response.out.write(level_3_template.render())
+
+class Level_4_Handler(webapp2.RequestHandler):
+    def get (self):
+        level_4_template = JINJA_ENVIRONMENT.get_template("templates/level4.html")
+        self.response.out.write(level_4_template.render())
+
+class Level_5_Handler(webapp2.RequestHandler):
+    def get (self):
+        level_5_template = JINJA_ENVIRONMENT.get_template("templates/level5.html")
+        self.response.out.write(level_5_template.render())
+
+
+
         #self.response.write('Hello world!')
-        template = JINJA_ENVIRONMENT.get_template('index.html')
-        self.response.write(template.render())
-
-
+        # template = JINJA_ENVIRONMENT.get_template('index.html')
+        # self.response.write(template.render())
+#>>>>>>> 4a0eeab248790272d9c8361a6dfda1212a5d7347
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', WelcomeHandler),
+    ('/level_1', Level_1_Handler),
+    ('/level_2', Level_2_Handler),
+    ('/level_3', Level_3_Handler),
+    ('/level_4', Level_4_Handler),
+    ('/level_5', Level_5_Handler)
 ], debug=True)
