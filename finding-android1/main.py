@@ -38,6 +38,14 @@ player1.put()
 
 class WelcomeHandler(webapp2.RequestHandler):
     def get(self):
+        # user = users.get_current_user()
+        # if user:
+        #     self.response.write(user)
+        #     user = UserModel(currentUser = user.user_id(), text="hey")
+        #     user.put()
+        # else:
+        #     self.redirect(user.create_login_url(self.request.url))
+
         welcome_template = JINJA_ENVIRONMENT.get_template("templates/welcome.html")
         self.response.out.write(welcome_template.render())
 
