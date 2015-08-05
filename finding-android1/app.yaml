@@ -13,7 +13,7 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 - url: /scripts
-  static_files: scripts
+  static_dir: scripts
 
 - url: .*
   script: main.app

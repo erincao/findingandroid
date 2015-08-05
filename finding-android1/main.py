@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
 import webapp2
 import jinja2
 import os
@@ -52,6 +53,7 @@ class WelcomeHandler(webapp2.RequestHandler):
 
 class Level_1_Handler(webapp2.RequestHandler):
     def get (self):
+        artist_interest = self.request.get ("level_entry")
         level_1_template = JINJA_ENVIRONMENT.get_template("templates/level1.html")
         self.response.out.write(level_1_template.render())
 

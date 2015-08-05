@@ -3,15 +3,44 @@
   <head>
     <title>Finding Android App</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scripts/javascript.js"></script>
   </head>
   <body>
     <div class="header">
       <img src="images/new_android_logo.jpg">
     </div>
-    
-    <h1>Level 5</h1>
+
+    <h1>Escaping Technology</h1>
     <div class="levels">
       <img src="https://ehkstream.files.wordpress.com/2014/08/wheres-waldo.jpg">
     </div>
+
+      <img class = "android" src = "images/Android1.png" height = 20% width = 20% ></img>
+
+      <form action="/final_page">
+      <button class = "next_level_button" onclick=  >Next Level</button>
+      </form>
+
+
+    <script>
+
+    $(document).ready(function(){
+    //$(".next_level_button").hide();
+
+      $(".android").on("click",function(){
+        //  $(".next_level_button").hide();
+          $(".android").width(500).height(500);
+           //window.alert("Congratulations, you found Android! Please click on the Next Level button.")
+          //$(".next_level_button").fadeIn();
+          window.location.href="level_2"
+        //  $(document).load("level2.html")
+    });
+    });
+
+
+
+     </script>
+
   </body>
 </html>
