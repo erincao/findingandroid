@@ -1,86 +1,27 @@
-#android_logo{
-  text-align: center;
-}
-
-#id{
-    width: 20em;
-    height: 2em;
-}
-
 #bg{
-  text-align: center;
+  /*margin: auto;*/
   position:absolute;
-  top:auto;
-  left:368px;
   z-index:0;
 }
-
 #android{
   width: 20px;
   height: 25px;
-  position:absolute;
-  /*
-  set top and left here
-  */
+  position:relative;
+  top: 431px;
+  left: 500px;
   z-index:1;
 }
-
-body{
-  background-color:
-}
-
-h1{
-  text-align: center;
-}
-
 p{
   text-align: center;
 }
-
+.bglevels{
+  width: 50%;
+  text-align: center;
+  margin-top: 10%;
+  margin-right: 10%;
+  /*position: absolute;*/
+  /*margin: auto;*/
+}
 .header{
   text-align: center;
-}
-
-.levels{
-  text-align: center;
-  /*width:140px;
-  text-decoration:none;
-  position:relative;
-  display:block;
-  z-index: -1
-  border:1px; solid #666;
-  padding:3px;
-  float: left;
-  margin-right:5px;*/
-}
-
-.android{
-  /*width: 5%;
-  height: 5%;
-  position:absolute;
-  left:40%;
-  top:35%;*/
-}
-
-.button {
-    background-color: #000000;
-    color: #FFFFFF;
-    float: right;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.small-btn {
-    width: 50px;
-    height: 20px;
-}
-
-.medium-btn {
-    width: 70px;
-    height: 30px;
-}
-
-.big-btn {
-    width: 90px;
-    height: 40px;
 }
