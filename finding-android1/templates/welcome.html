@@ -2,30 +2,44 @@
 <html>
   <head>
     <title>Finding Android App</title>
+    <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="templates/style.css">
+
+    <style>
+
+body {background-image: url("http://www.consalpi.it/images/white-abstract-background-with-green-lines.jpg.jpg");}
+h1   {color:red;
+    font-family: "Orbitron", Arial, serif;
+    text-align: center;}
+p    {color:black;
+    font-family: "Orbitron", Arial, serif;
+    text-align: center;}
+
+#play {
+  text-align:center;
+}
+
+    </style>
+
   </head>
 
-  <body>
-    <img id="android_logo" src="images/new_android_logo.jpg">
-    </br>
 
-    <!-- <p>Challenge: Your task is to find the Android icon among the midst of randomness.v </p> -->
+    <body>
+        <img src="images/new_android_logo.jpg">
+      </a>
+    </img>
 
-    <!-- <form action="/play" method="get" id="form1">
-      <button type="submit" value="Submit">Play</button> -->
 
-    <p>Challenge: Your task is to find the Android icon among the midst of randomness.<br />
+    <h1> Challenge:</h1>
 
-    Rules: Search for the hidden Android. Click the location you believe the Android is located. Levels vary in difficulty, more levels cleared = difficulty increases.
-    <br />
-    Objective: Find the android figure within the picture to advance to the next level.
-    </p>
+    <p>Your task is to find the Android icon among the midst of randomness.</p>
 
-    <!-- <form action="/play" method="get" id="form1">
-      <button type="submit" value="Submit">Play</button> -->
+    <p>If you advance to the next levels, you have the option to return home by simply clicking on the "Finding Android" logo.</p>
+
+
     <div id="play">
       <form action="/level_1" method="get" id="form1">
-        <button id="submit" type="submit" value="Submit">Play</button>
+        <button id="submit" type="submit" value="Submit" style="width: 200px; height: 60px"><h1>Play</h1></button>
       </form>
     </div>
 

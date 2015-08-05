@@ -8,54 +8,63 @@
   </head>
   <body>
     <div class="header">
+      <a href ="http://localhost:11080/">
       <img src="images/new_android_logo.jpg">
+    </a>
       <h1>Level 3: Misfit in Tokyo</h1>
     </div>
 
-    <div class="levels">
-      <img src="http://images.forwallpaper.com/files/images/e/edaa/edaaed01/884102/wallpaper-scenic-rain-wallpapers-rainyhongkong.jpg" height = 50% width = 50%>
-    <div class="levels">
-      <img src="http://read-jam.com/wp-content/uploads/2014/12/tokyo-by-night_00.jpg">
+
+    <div class="bglevels">
+      <img id="bg" src="http://marketurbanism.com/wp-content/uploads/2014/07/Tokyo.jpg" height = 60% width = 60%></img>
+      <img id="android" src="images/Android1.png">
     </div>
 
-      <img class = "android" src = "images/Android1.png" height = 20% width = 20% ></img>
 
       <form action="/level_4">
-      <button class = "next_level_button" onclick=  >Next Level</button>
+      <button class = "next_level_button">Next Level</button>
       </form>
 
-    <script>
+      <script>
 
-    $(document).ready(function(){
-      $(".next_level_button").hide()
-       $(".android").click(function(){
-         $(".android").height(200).width(200)
-        animateAndroid();
-        $(".next_level_button").fadeIn()
+      $(document).ready(function(){
+        $(".next_level_button").hide()
+         $("#android").click(function(){
+           $("#android").height(200).width(200)
+          animateAndroid();
+          $(".next_level_button").fadeIn()
 
-       // window.location.href="level_2"
-   });
-   });
+         // window.location.href="level_2"
+     });
+     });
+     //  $(document).ready(function(){
+     //   //  $(".next_level_button").hide()
+     //      $("#android").click(function(){
+     //       $("#android").height(200).width(200)
+     //       animateAndroid();
+     //   //    $(".next_level_button").fadeIn()
+     //
+     //      window.location.href="level_2"
+     // });
+     // });
+     function makeNewPosition(){
+         // Get viewport dimensions (remove the dimension of the div)
+         var h = $(window).height() - 50;
+         var w = $(window).width() - 50;
 
-   function makeNewPosition(){
+         var nh = Math.floor(Math.random() * h);
+         var nw = Math.floor(Math.random() * w);
 
-       // Get viewport dimensions (remove the dimension of the div)
-       var h = $(window).height() - 50;
-       var w = $(window).width() - 50;
+         return [nh,nw];
+     }
+     function animateAndroid(){
+         var newq = makeNewPosition();
+         $("#android").animate({ top: newq[0], left: newq[1] }, function(){
+           animateAndroid();
+         });
+         };
 
-       var nh = Math.floor(Math.random() * h);
-       var nw = Math.floor(Math.random() * w);
 
-       return [nh,nw];
-
-   }
-
-   function animateAndroid(){
-       var newq = makeNewPosition();
-       $(".android").animate({ top: newq[0], left: newq[1] }, function(){
-         animateAndroid();
-       });
-       };
-     </script>
-  </body>
-</html>
+         </script>
+       </body>
+     </html>

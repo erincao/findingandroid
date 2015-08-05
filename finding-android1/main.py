@@ -80,12 +80,18 @@ class Level_5_Handler(webapp2.RequestHandler):
         #self.response.write('Hello world!')
         # template = JINJA_ENVIRONMENT.get_template('index.html')
         # self.response.write(template.render())
-#>>>>>>> 4a0eeab248790272d9c8361a6dfda1212a5d7347
+
+class Best_Scores_Handler(webapp2.RequestHandler):
+    def get (self):
+        best_scores_template = JINJA_ENVIRONMENT.get_template("templates/best_scores.html")
+        self.response.out.write(best_scores_template.render())
+
 app = webapp2.WSGIApplication([
     ('/', WelcomeHandler),
     ('/level_1', Level_1_Handler),
     ('/level_2', Level_2_Handler),
     ('/level_3', Level_3_Handler),
     ('/level_4', Level_4_Handler),
-    ('/level_5', Level_5_Handler)
+    ('/level_5', Level_5_Handler),
+    ('/best_scores', Best_Scores_Handler)
 ], debug=True)
