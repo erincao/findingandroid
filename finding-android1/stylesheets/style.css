@@ -38,6 +38,30 @@ p{
   left: 83px;
   z-index:1;
 }
+#android_level3{
+  width: 20px;
+  height: 25px;
+  position:relative;
+  top: 60px;
+  left: 83px;
+  z-index:1;
+}
+#android_level4{
+  width: 20px;
+  height: 25px;
+  position:relative;
+  top: 60px;
+  left: 83px;
+  z-index:1;
+}
+#android_level5{
+  width: 20px;
+  height: 25px;
+  position:relative;
+  top: 60px;
+  left: 83px;
+  z-index:1;
+}
 .bglevel1{
   width: 50%;
   height: 631px;
@@ -56,7 +80,21 @@ p{
   width: 50%;
   height: 1000px;
   margin: 0 auto;
-  background-image: url("http://www.pragmaticmom.com/wp-content/uploads/2014/05/map.jpg");
+  background-image: url("http://marketurbanism.com/wp-content/uploads/2014/07/Tokyo.jpg");
+  background-repeat: no-repeat;
+}
+.bglevel4{
+  width: 50%;
+  height: 1000px;
+  margin: 0 auto;
+  background-image: url("http://blog.artandstory.com/wp-content/uploads/2011/06/spread01-washdc_crop.jpg");
+  background-repeat: no-repeat;
+}
+.bglevel5{
+  width: 50%;
+  height: 1000px;
+  margin: 0 auto;
+  background-image: url("http://arzoenterprises.com/new-site/wp-content/uploads/2014/07/3356624308_53fdd5dde3_o.jpg");
   background-repeat: no-repeat;
 }
 .header{

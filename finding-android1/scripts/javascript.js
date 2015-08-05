@@ -29,10 +29,20 @@ $(document).ready(function(){
   $("#next_level_button_4").hide()
   $("#android_level4").click(function(){
     $("#android_level4").height(200).width(200)
-    animateAndroid_2();
+    animateAndroid_4();
     $("#next_level_button_4").fadeIn()
 });
 });
+
+$(document).ready(function(){
+  $("#next_level_button_5").hide()
+  $("#android_level5").click(function(){
+    $("#android_level5").height(200).width(200)
+    animateAndroid_5();
+    $("#next_level_button_5").fadeIn()
+});
+});
+
 
 
 
@@ -63,21 +73,21 @@ function animateAndroid_2(){
 
 function animateAndroid_3(){
     var newq = makeNewPosition();
-    $("#android_level1").animate({ top: newq[0], left: newq[1] }, function(){
+    $("#android_level3").animate({ top: newq[0], left: newq[1] }, function(){
       animateAndroid_3();
     });
 };
 
 function animateAndroid_4(){
     var newq = makeNewPosition();
-    $("#android_level1").animate({ top: newq[0], left: newq[1] }, function(){
+    $("#android_level4").animate({ top: newq[0], left: newq[1] }, function(){
       animateAndroid_4();
     });
 };
 
 function animateAndroid_5(){
     var newq = makeNewPosition();
-    $("#android_level1").animate({ top: newq[0], left: newq[1] }, function(){
+    $("#android_level5").animate({ top: newq[0], left: newq[1] }, function(){
       animateAndroid_5();
     });
 };

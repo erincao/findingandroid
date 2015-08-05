@@ -14,55 +14,12 @@
       <h1>Level 5: Escaping Technology</h1>
     </div>
 
-    <div class="bglevels">
-      <img id="bg" src="http://arzoenterprises.com/new-site/wp-content/uploads/2014/07/3356624308_53fdd5dde3_o.jpg" height = 60% width = 60%></img>
-      <img id="android" src="images/Android1.png">
+    <div class="bglevel5">
+      <img id="android_level5" src="images/Android1.png">
     </div>
 
     <form action="/best_scores">
-      <button class = "next_level_button" onclick=  >Next Level</button>
+      <button class = "next_level_button_5" onclick=  >Next Level</button>
     </form>
-
-      <script>
-
-      $(document).ready(function(){
-        $(".next_level_button").hide()
-         $("#android").click(function(){
-           $("#android").height(200).width(200)
-          animateAndroid();
-          $(".next_level_button").fadeIn()
-
-         // window.location.href="level_2"
-     });
-     });
-     //  $(document).ready(function(){
-     //   //  $(".next_level_button").hide()
-     //      $("#android").click(function(){
-     //       $("#android").height(200).width(200)
-     //       animateAndroid();
-     //   //    $(".next_level_button").fadeIn()
-     //
-     //      window.location.href="level_2"
-     // });
-     // });
-     function makeNewPosition(){
-         // Get viewport dimensions (remove the dimension of the div)
-         var h = $(window).height() - 50;
-         var w = $(window).width() - 50;
-
-         var nh = Math.floor(Math.random() * h);
-         var nw = Math.floor(Math.random() * w);
-
-         return [nh,nw];
-     }
-     function animateAndroid(){
-         var newq = makeNewPosition();
-         $("#android").animate({ top: newq[0], left: newq[1] }, function(){
-           animateAndroid();
-         });
-         };
-
-
-         </script>
        </body>
      </html>
