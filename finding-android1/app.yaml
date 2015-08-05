@@ -14,7 +14,10 @@ handlers:
   upload: favicon\.ico
 - url: /scripts
   static_dir: scripts
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1f318b56de110cd33e90b4b62f2d8de8eb9ec6bc
 - url: .*
   script: main.app
 
