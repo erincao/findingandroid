@@ -22,34 +22,34 @@ p{
 #intro{
   text-align: center;
 }
-#bg{
-  z-index:0;
-}
 #android_level1{
   width: 20px;
   height: 25px;
   position:relative;
-  top: 431px;
-  left: 500px;
+  top: 470px;
+  left: 505px;
   z-index:1;
 }
 #android_level2{
   width: 20px;
   height: 25px;
   position:relative;
-  top: 431px;
-  left: 500px;
+  top: 60px;
+  left: 83px;
   z-index:1;
 }
-.bglevels{
+.bglevel1{
   width: 85%;
   height: 1232px;
   margin: 0 auto;
   background-image: url("http://www.pragmaticmom.com/wp-content/uploads/2014/05/map.jpg");
 }
-.bglevels2{
-  width: 50%;
+.bglevel2{
+  width: 85%;
+  height: 1232px;
   margin: 0 auto;
+  background-image: url("https://c1.staticflickr.com/5/4153/5094259179_8590d66c59_b.jpg");
+  background-repeat: no-repeat;
 }
 .header{
   text-align: center;

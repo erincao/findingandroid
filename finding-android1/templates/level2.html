@@ -15,16 +15,9 @@
       <h1>Level 2: Lost in Toy World</h1>
     </div>
 
-    <div class="bglevels">
-
-      <img id="bg" src="https://c1.staticflickr.com/5/4153/5094259179_8590d66c59_b.jpg">
-      <img id="android" src="images/Android1.png">
-
-      <img id="bg"src="https://c1.staticflickr.com/5/4153/5094259179_8590d66c59_b.jpg">
+    <div class="bglevel2">
       <img id="android_level2" src = "images/Android1.png">
-
     </div>
-
 
       <form action="/level_3">
       <button class = "next_level_button">Next Level</button>
@@ -38,19 +31,8 @@ $(document).ready(function(){
      $("#android").height(200).width(200)
     animateAndroid();
     $(".next_level_button").fadeIn()
-
-  <script>
-    $(document).ready(function(){
-      $(".next_level_button").hide()
-       $(".android").click(function(){
-         $(".android").height(200).width(200)
-        animateAndroid();
-        $(".next_level_button").fadeIn()
-
-
-       // window.location.href="level_2"
     });
-    });
+});
 
     function makeNewPosition(){
 
@@ -74,14 +56,6 @@ function animateAndroid(){
    };
 
 </script>
-
-    function animateAndroid(){
-       var newq = makeNewPosition();
-       $(".android").animate({ top: newq[0], left: newq[1] }, function(){
-         animateAndroid();
-       });
-     };
-   </script>
 
   </body>
 </html>
