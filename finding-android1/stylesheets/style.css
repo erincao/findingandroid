@@ -7,6 +7,28 @@
     height: 2em;
 }
 
+#bg{
+  text-align: center;
+  position:absolute;
+  top:auto;
+  left:368px;
+  z-index:0;
+}
+
+#android{
+  width: 20px;
+  height: 25px;
+  position:absolute;
+  /*
+  set top and left here
+  */
+  z-index:1;
+}
+
+body{
+  background-color:
+}
+
 h1{
   text-align: center;
 }
@@ -21,6 +43,23 @@ p{
 
 .levels{
   text-align: center;
+  /*width:140px;
+  text-decoration:none;
+  position:relative;
+  display:block;
+  z-index: -1
+  border:1px; solid #666;
+  padding:3px;
+  float: left;
+  margin-right:5px;*/
+}
+
+.android{
+  /*width: 5%;
+  height: 5%;
+  position:absolute;
+  left:40%;
+  top:35%;*/
 }
 
 .button {
