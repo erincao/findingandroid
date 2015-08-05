@@ -39,10 +39,11 @@ p{
   z-index:1;
 }
 .bglevel1{
-  width: 85%;
-  height: 1232px;
+  width: 50%;
+  height: 631px;
   margin: 0 auto;
   background-image: url("http://www.pragmaticmom.com/wp-content/uploads/2014/05/map.jpg");
+  background-repeat: no-repeat;
 }
 .bglevel2{
   width: 85%;
