@@ -8,50 +8,62 @@
   </head>
   <body>
     <div class="header">
+      <a href ="http://localhost:11080/">
       <img src="images/new_android_logo.jpg">
+    </a>
       <h1>Level 4: Savior in Chaos</h1>
     </div>
-    <div class="levels">
-      <img src="http://blog.artandstory.com/wp-content/uploads/2011/06/spread01-washdc_crop.jpg" height = 50% width = 20%>
+
+
+    <div class="bglevels">
+      <img id="bg" src="http://blog.artandstory.com/wp-content/uploads/2011/06/spread01-washdc_crop.jpg"></img>
+      <img id="android" src="images/Android1.png">
     </div>
 
-      <img class = "android" src = "images/Android1.png" height = 20% width = 20% ></img>
-
       <form action="/level_5">
-      <button class = "next_level_button" onclick=  >Next Level</button>
+      <button class = "next_level_button" onclick= >Next Level</button>
       </form>
 
-    <script>
+      <script>
 
-    $(document).ready(function(){
-      $(".next_level_button").hide()
-       $(".android").click(function(){
-         $(".android").height(200).width(200)
-        animateAndroid();
-        $(".next_level_button").fadeIn()
+      $(document).ready(function(){
+        $(".next_level_button").hide()
+         $("#android").click(function(){
+           $("#android").height(200).width(200)
+          animateAndroid();
+          $(".next_level_button").fadeIn()
 
-       // window.location.href="level_2"
-   });
-   });
+         // window.location.href="level_2"
+     });
+     });
+     //  $(document).ready(function(){
+     //   //  $(".next_level_button").hide()
+     //      $("#android").click(function(){
+     //       $("#android").height(200).width(200)
+     //       animateAndroid();
+     //   //    $(".next_level_button").fadeIn()
+     //
+     //      window.location.href="level_2"
+     // });
+     // });
+     function makeNewPosition(){
+         // Get viewport dimensions (remove the dimension of the div)
+         var h = $(window).height() - 50;
+         var w = $(window).width() - 50;
 
-   function makeNewPosition(){
+         var nh = Math.floor(Math.random() * h);
+         var nw = Math.floor(Math.random() * w);
 
-       // Get viewport dimensions (remove the dimension of the div)
-       var h = $(window).height() - 50;
-       var w = $(window).width() - 50;
+         return [nh,nw];
+     }
+     function animateAndroid(){
+         var newq = makeNewPosition();
+         $("#android").animate({ top: newq[0], left: newq[1] }, function(){
+           animateAndroid();
+         });
+         };
 
-       var nh = Math.floor(Math.random() * h);
-       var nw = Math.floor(Math.random() * w);
 
-       return [nh,nw];
-   }
-
-   function animateAndroid(){
-       var newq = makeNewPosition();
-       $(".android").animate({ top: newq[0], left: newq[1] }, function(){
-         animateAndroid();
-       });
-       };
-     </script>
-  </body>
-</html>
+         </script>
+       </body>
+     </html>
