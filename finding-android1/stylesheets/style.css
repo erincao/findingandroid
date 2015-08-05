@@ -1,35 +1,23 @@
 @import url(http://fonts.googleapis.com/css?family=Orbitron:700);
+
 body {
-
-  font-family: 'Orbitron', Arial, sans-serif;
-}
-#android_logo{
-  text-align: center;
-  z-index:1;
-
-  font-family: 'Orbitron', sans-serif;
-  color: black;
-
-<<<<<<< HEAD
-  background-color: #ffffff;
-}
-
-
-#android_logo{
-  text-align: center;
-
-=======
->>>>>>> 203eb6119e7365387aeac0554df8e072ce160e62
 }
 h1{
   text-align: center;
   font-family: "Orbitron", Arial, serif;
 }
-#welcomebody{
-  background-image: url("http://www.webdesignhot.com/wp-content/uploads/2012/12/Abstract-Green-Background-Wallpaper-Vector-Graphic.jpg");
-}
 p{
   text-align: center;
+}
+#submit{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#android_logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 #intro{
   text-align: center;
@@ -37,25 +25,13 @@ p{
 #bg{
   z-index:0;
 }
-
-
-
-#android{
-
 #android_level1{
-
   width: 20px;
   height: 25px;
   position:relative;
   top: 431px;
   left: 500px;
   z-index:1;
-
-};
-p{
-  text-align: center;
-  font-family: "Orbitron", Arial, sans-serif;
-
 }
 #android_level2{
   width: 20px;
@@ -64,9 +40,7 @@ p{
   top: 431px;
   left: 500px;
   z-index:1;
-
 }
-
 .bglevels{
   width: 85%;
   height: 1232px;
@@ -79,4 +53,10 @@ p{
 }
 .header{
   text-align: center;
+}
+body.welcomebody{
+  font-family: 'Orbitron', Arial, sans-serif;
+  background-image: url("http://www.consalpi.it/images/white-abstract-background-with-green-lines.jpg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

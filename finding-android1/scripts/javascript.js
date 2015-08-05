@@ -1,26 +1,25 @@
-// $(document).ready(function(){
-// //$(".next_level_button").hide();
-//
-//   $(".android").on("click",function(){
-//     //  $(".next_level_button").hide();
-//       $(".android").width(500).height(500);
-//        //window.alert("Congratulations, you found Android! Please click on the Next Level button.")
-//       //$(".next_level_button").fadeIn();
-//       window.location.href="level_2"
-//     //  $(document).load("level2.html")
-// });
-// });
+$(document).ready(function(){
+   $(".next_level_button").hide()
+    $("#android_level1").click(function(){
+      $("#android_level1").height(200).width(200)
+     animateAndroid();
+     $(".next_level_button").fadeIn()
+   });
+});
 
+function makeNewPosition(){
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 50;
+    var w = $(window).width() - 50;
 
-// $(document).ready(function(){
-// //$(".next_level_button").hide();
-//
-//   $(".android").on("click",function(){
-//     //  $(".next_level_button").hide();
-//       $(".android").width(500).height(500);
-//        //window.alert("Congratulations, you found Android! Please click on the Next Level button.")
-//       //$(".next_level_button").fadeIn();
-//       window.location.href="level_2"
-//     //  $(document).load("level2.html")
-// });
-// });
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+
+    return [nh,nw];
+}
+function animateAndroid(){
+    var newq = makeNewPosition();
+    $("#android_level1").animate({ top: newq[0], left: newq[1] }, function(){
+      animateAndroid();
+    });
+};
