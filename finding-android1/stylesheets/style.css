@@ -1,39 +1,16 @@
-<<<<<<< HEAD
-.android {
-width: 50px;
-height:50px;
-position:fixed;
-
-}
-
-=======
-<<<<<<< HEAD
 @import url(http://fonts.googleapis.com/css?family=Orbitron:700);
 body {
   font-family: 'Orbitron', sans-serif;
   color: black;
   background-color: #ffffff;
 }
-
-
-
->>>>>>> 5f8264b28baba3960f0c27178d6a9333071ce7e1
 #android_logo{
   text-align: center;
 }
-
-#id{
-    width: 20em;
-    height: 2em;
-}
-
-
 h1{
   text-align: center;
   font-style: "Orbitron", Arial, serif;
 }
-
-=======
 #bg{
   /*margin: auto;*/
   position:absolute;
@@ -47,7 +24,6 @@ h1{
   left: 500px;
   z-index:1;
 }
->>>>>>> 1f318b56de110cd33e90b4b62f2d8de8eb9ec6bc
 p{
   text-align: center;
 }

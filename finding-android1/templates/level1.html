@@ -12,20 +12,8 @@
   <body>
     <div class="header">
       <img src="images/new_android_logo.jpg">
-      <h1>Level 1</h1>
+      <h1>Level 1: Scattered Madness</h1>
     </div>
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5f8264b28baba3960f0c27178d6a9333071ce7e1
-    <h1>Scattered Madness</h1>
-
-    <div class="levels">
-      <img src="http://www.pragmaticmom.com/wp-content/uploads/2014/05/map.jpg">
-    </div>
-<<<<<<< HEAD
-=======
 
     <script>
     $(document).ready(function(){
@@ -33,54 +21,41 @@
          $('h1').hide();
        });
     });
-
     </script>
 
-=======
     <div class="bglevels">
       <img id="bg" src="http://www.pragmaticmom.com/wp-content/uploads/2014/05/map.jpg">
       <img id="android" src="images/Android1.png">
     </div>
 
->>>>>>> 1f318b56de110cd33e90b4b62f2d8de8eb9ec6bc
-      <!-- <form>
->>>>>>> 5f8264b28baba3960f0c27178d6a9333071ce7e1
-
-    <img class = "android" src = "images/Android1.png" height = 10% width = 10% ></img>
-
-
-<form action="/level_2">
-<button class = "next_level_button" onclick=  >Next Level</button>
-</form>
-
+    <form>
+    <form action="/level_2">
+    <button class = "next_level_button" onclick=  >Next Level</button>
+    </form>
 
  <script>
 
  $(document).ready(function(){
    $(".next_level_button").hide()
-    $(".android").click(function(){
-      $(".android").height(200).width(200)
+    $("#android").click(function(){
+      $("#android").height(200).width(200)
      animateAndroid();
      $(".next_level_button").fadeIn()
 
     // window.location.href="level_2"
 });
 });
-
-
- $(document).ready(function(){
-  //  $(".next_level_button").hide()
-     $(".android").click(function(){
-      $(".android").height(200).width(200)
-      animateAndroid();
-  //    $(".next_level_button").fadeIn()
-
-     window.location.href="level_2"
-});
-});
-
+//  $(document).ready(function(){
+//   //  $(".next_level_button").hide()
+//      $("#android").click(function(){
+//       $("#android").height(200).width(200)
+//       animateAndroid();
+//   //    $(".next_level_button").fadeIn()
+//
+//      window.location.href="level_2"
+// });
+// });
 function makeNewPosition(){
-
     // Get viewport dimensions (remove the dimension of the div)
     var h = $(window).height() - 50;
     var w = $(window).width() - 50;
@@ -89,12 +64,10 @@ function makeNewPosition(){
     var nw = Math.floor(Math.random() * w);
 
     return [nh,nw];
-
 }
-
 function animateAndroid(){
     var newq = makeNewPosition();
-    $(".android").animate({ top: newq[0], left: newq[1] }, function(){
+    $("#android").animate({ top: newq[0], left: newq[1] }, function(){
       animateAndroid();
     });
     };

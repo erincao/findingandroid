@@ -34,7 +34,7 @@ class UserModel(ndb.Model):
     level = ndb.IntegerProperty()
     attempts = ndb.IntegerProperty()
     text = ndb.StringProperty()
-    
+
 # # user1 = UserModel (currentUser = "James", level = 1, attempts = 1)
 # user1.put()
 
@@ -77,17 +77,10 @@ class Level_5_Handler(webapp2.RequestHandler):
     def get (self):
         level_5_template = JINJA_ENVIRONMENT.get_template("templates/level5.html")
         self.response.out.write(level_5_template.render())
-
-<<<<<<< HEAD
-
-
         #self.response.write('Hello world!')
         # template = JINJA_ENVIRONMENT.get_template('index.html')
         # self.response.write(template.render())
 #>>>>>>> 4a0eeab248790272d9c8361a6dfda1212a5d7347
-
-=======
->>>>>>> 1f318b56de110cd33e90b4b62f2d8de8eb9ec6bc
 app = webapp2.WSGIApplication([
     ('/', WelcomeHandler),
     ('/level_1', Level_1_Handler),
