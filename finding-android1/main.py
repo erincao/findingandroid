@@ -51,6 +51,16 @@ class WelcomeHandler(webapp2.RequestHandler):
         self.response.out.write(welcome_template.render())
 
 
+class AttemptsHandler(webapp2.RequestHandler):
+    def post(self):
+        # user_first_name = self.response.get('user_first_name')
+        # user_last_name = self.response.get('user_last_name')
+        user = users.get_current_user()
+        user1 = UserModel.query(user.user_id()==UserModel.currentUser)
+        for user in user1:
+            user.attempts = int(self.request.get('attempts'))
+            user.put()
+
 class Level_1_Handler(webapp2.RequestHandler):
     def get (self):
         artist_interest = self.request.get ("level_entry")
@@ -110,6 +120,7 @@ app = webapp2.WSGIApplication([
     ('/level_3', Level_3_Handler),
     ('/level_4', Level_4_Handler),
     ('/level_5', Level_5_Handler),
+    ('/AttemptsHandler', AttemptsHandler),
     ('/congratulations', Congratulations_Handler),
     ('/about_us', About_Us_Handler)
 ], debug=True)
