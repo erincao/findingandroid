@@ -31,9 +31,10 @@ def redirect_play():
 
 class UserModel(ndb.Model):
     currentUser = ndb.StringProperty()
+    user_first_name = ndb.StringProperty()
+    user_last_name = ndb.StringProperty()
     level = ndb.IntegerProperty()
     attempts = ndb.IntegerProperty()
-    text = ndb.StringProperty()
 
 # # user1 = UserModel (currentUser = "James", level = 1, attempts = 1)
 # user1.put()
@@ -42,17 +43,28 @@ class WelcomeHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
         if user:
-            #self.response.write(user)
-            user = UserModel(currentUser = user.user_id())
-            user.put()
+            pass
         else:
             self.redirect(users.create_login_url(self.request.url))
 
         welcome_template = JINJA_ENVIRONMENT.get_template("templates/welcome.html")
         self.response.out.write(welcome_template.render())
 
+
 class Level_1_Handler(webapp2.RequestHandler):
     def get (self):
+        artist_interest = self.request.get ("level_entry")
+        level_1_template = JINJA_ENVIRONMENT.get_template("templates/level1.html")
+        self.response.out.write(level_1_template.render())
+
+    def post(self):
+        # user_first_name = self.response.get('user_first_name')
+        # user_last_name = self.response.get('user_last_name')
+        user = users.get_current_user()
+
+
+        user1 = UserModel(currentUser=user.user_id(), user_first_name = self.request.get('user_first_name'), user_last_name =  self.request.get('user_last_name'), attempts = 0)
+        user1.put()
         artist_interest = self.request.get ("level_entry")
         level_1_template = JINJA_ENVIRONMENT.get_template("templates/level1.html")
         self.response.out.write(level_1_template.render())
@@ -81,10 +93,15 @@ class Level_5_Handler(webapp2.RequestHandler):
         # template = JINJA_ENVIRONMENT.get_template('index.html')
         # self.response.write(template.render())
 
-class Best_Scores_Handler(webapp2.RequestHandler):
+class Congratulations_Handler(webapp2.RequestHandler):
     def get (self):
-        best_scores_template = JINJA_ENVIRONMENT.get_template("templates/best_scores.html")
-        self.response.out.write(best_scores_template.render())
+        congratulations_template = JINJA_ENVIRONMENT.get_template("templates/congratulations.html")
+        self.response.out.write(congratulations_template.render())
+
+class About_Us_Handler(webapp2.RequestHandler):
+    def get (self):
+        about_us_template = JINJA_ENVIRONMENT.get_template("templates/about_us.html")
+        self.response.out.write(about_us_template.render())
 
 app = webapp2.WSGIApplication([
     ('/', WelcomeHandler),
@@ -93,5 +110,6 @@ app = webapp2.WSGIApplication([
     ('/level_3', Level_3_Handler),
     ('/level_4', Level_4_Handler),
     ('/level_5', Level_5_Handler),
-    ('/best_scores', Best_Scores_Handler)
+    ('/congratulations', Congratulations_Handler),
+    ('/about_us', About_Us_Handler)
 ], debug=True)

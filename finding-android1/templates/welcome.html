@@ -16,7 +16,9 @@
     </div>
 
     <div id="play">
-      <form action="/level_1" method="get" id="form1">
+      <form method="post" action="/level_1">
+        <input type="text" name="user_first_name" placeholder="First Name">
+        <input type="text" name="user_last_name" placeholder="Last Name">
         <button id="submit" type="submit" value="Submit" style="width: 200px; height: 60px"><h1>Play</h1></button>
       </form>
     </div>
