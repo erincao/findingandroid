@@ -60,7 +60,7 @@ $(document).ready(function(){
     $.post( "/AttemptsHandler", { 'attempts': counter } );
     $("#android_level5").height(200).width(200)
     animateAndroid_5();
-    $("#next_level_button").fadeIn()
+    $(".next_level_button").fadeIn()
   });
   $('.bglevel5').click(function() {
     counter++;
@@ -79,9 +79,9 @@ $(document).ready(function(){
     animateDancing_Android;
 });
 
-function randomize(){
-  
-}
+// function randomize(){
+//
+// }
 
 function animateLollipop(){
     var newq = makeNewPosition();
