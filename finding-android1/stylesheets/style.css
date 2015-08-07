@@ -24,6 +24,9 @@ p{
 }
 #android_logo{
   display: block;
+  width: 1300px;
+  height: 175px;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -136,7 +139,13 @@ p{
   left: 540px;
   z-index:1;
 }
-
+#air_balloon{
+  width:750px;
+  height:500px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  z-index:0;
+}
 #android_dancing{
   width: 50px;
   height: 75px;
@@ -144,7 +153,55 @@ p{
   top: 10px;
   left: 20px;
   z-index:1;
-}.about_us{
+}
+
+
+.form{
+  text-align: center;
+  padding-bottom: 20px;
+}
+.textbox{
+  /*text-align: center;*/
+}
+.headerContent{
+  text-align: center;
+}
+.nav{
+  height: 40px;
+  width: 313px;
+  background-color: #BDBDBD;
+  text-align: center;
+}
+.nav ul{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.nav ul li{
+  font-family: "Orbitron", Arial, serif;
+  display: inline-block;
+  list-style: none;
+}
+.nav ul li a{
+
+  text-decoration: none;
+  position: relative;
+  float: left;
+  display: inline-block;
+  padding: 12px 12px;
+}
+.nav ul li a:hover{
+  color: white;
+}
+.headerLine{
+  width: 100%;
+  height: 0;
+  border-bottom: 3px solid #BDBDBD;
+}
+
+
+
+.about_us{
   text-align: center;
 }
 .next_level_button{
@@ -182,20 +239,11 @@ p{
 }
 .bglevel5{
   width: 1280px;
-  height: 1000px;
+  height: 1024px;
   margin: 0 auto;
   background-image: url("/images/level5.jpg");
   background-repeat: no-repeat;
 }
-
-#air_balloon{
-  width:750px;
-  height:500px;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  z-index:0;
-}
-
 .header{
   text-align: center;
 }
