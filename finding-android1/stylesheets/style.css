@@ -140,6 +140,7 @@ p{
   z-index:1;
 }
 #air_balloon{
+  display: block;
   width:750px;
   height:500px;
   margin: 0 auto;
@@ -155,7 +156,6 @@ p{
   z-index:1;
 }
 
-
 .form{
   text-align: center;
   padding-bottom: 20px;
@@ -168,7 +168,7 @@ p{
 }
 .nav{
   height: 40px;
-  width: 313px;
+  width: 188px;
   background-color: #BDBDBD;
   text-align: center;
 }
@@ -183,7 +183,6 @@ p{
   list-style: none;
 }
 .nav ul li a{
-
   text-decoration: none;
   position: relative;
   float: left;
@@ -198,8 +197,6 @@ p{
   height: 0;
   border-bottom: 3px solid #BDBDBD;
 }
-
-
 
 .about_us{
   text-align: center;
@@ -244,6 +241,13 @@ p{
   background-image: url("/images/level5.jpg");
   background-repeat: no-repeat;
 }
+/*.congratulations_images{
+  width:;
+  height:;
+  margin: 0 auto;
+  background-image: url("/images/congratz.jpg");
+  background-repeat: no-repeat;
+}*/
 .header{
   text-align: center;
 }
