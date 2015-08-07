@@ -24,8 +24,7 @@ p{
 }
 #android_logo{
   display: block;
-  width: 1300px;
-  height: 175px;
+  width: 100%;
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
@@ -37,23 +36,23 @@ p{
   width: 20px;
   height: 25px;
   position:relative;
-  top: 470px;
-  left: 505px;
+  top: 65%;
+  left: 63%;
   z-index:1;
 }
 #android_level2{
   width: 20px;
   height: 25px;
   position:relative;
-  top: 60px;
-  left: 83px;
+  top: 10%;
+  left: 10%;
   z-index:1;
 }
 #android_level3{
   width: 20px;
   height: 25px;
   position:relative;
-  top: -61%;
+  top: 70%;
   left: 15%;
   z-index:1;
 }
@@ -61,7 +60,7 @@ p{
   width: 20px;
   height: 25px;
   position:relative;
-  top: -50%;
+  top: 50%;
   left: 50%;
   z-index:1;
 }
@@ -69,7 +68,7 @@ p{
   width: 20px;
   height: 25px;
   position:relative;
-  top: -50%;
+  top: 50%;
   left: 50%;
   z-index:1;
 }
@@ -139,9 +138,10 @@ p{
 }
 #air_balloon{
   display: block;
+  margin-left: auto;
+  margin-right: auto;
   width:750px;
   height:500px;
-  margin: 0 auto;
   background-repeat: no-repeat;
   z-index:0;
 }
@@ -153,6 +153,15 @@ p{
   left: 20px;
   z-index:1;
 }
+/*#tokyo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  height: 540px;
+  background-repeat: no-repeat;
+  z-index:0;*/
+
 
 .form{
   text-align: center;
@@ -205,42 +214,64 @@ p{
   color: red;
   width: 200px;
   height: 60px;
+  font-size:100%;
+  color:red;
+  font-family: "Orbitron", Arial, serif;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width:200px;
+  height:60px;
+
 }
-.bglevel1{
-  width: 736px;
+
+.bglevel1 {
+  width: 100%;
   height: 616px;
   margin: 0 auto;
+  /*background-position: center;*/
   background-image: url("/images/level1.jpg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 .bglevel2{
-  width: 1024px;
+  width: 100%;
   height: 768px;
   margin: 0 auto;
   background-image: url("/images/level2.jpg");
   background-repeat: no-repeat;
+  /*background-position: center;*/
+  background-size: cover;
 }
 .bglevel3{
-  width: 1920px;
-  height: 1080px;
+  width: 100%;
+  height: 650px;
   margin: 0 auto;
+  display: block;
+  z-index:0;
+  background-image: url("/images/rsz_level3.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
 }
 .bglevel4{
-  width: 2123px;
-  height: 1000px;
+  width: 100%;
+  height: 670px;
   margin: 0 auto;
+  background-image: url("/images/rsz_level4.jpg");
   background-repeat: no-repeat;
+  /*background-position: center;*/
+  background-size: cover;
+
 }
 .bglevel5{
-  width: 1280px;
-  height: 1024px;
+  width: 100%;
+  height: 768px;
   margin: 0 auto;
+  background-image: url("/images/rsz_level5.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  /*background-size: cover;*/
 }
 .congratulations_images{
   width:;
@@ -263,4 +294,9 @@ body.welcomebody{
   background-image: url("http://www.consalpi.it/images/white-abstract-background-with-green-lines.jpg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+
+.congratulationsbody {
+  padding-bottom: 35px;
 }
