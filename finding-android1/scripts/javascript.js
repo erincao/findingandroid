@@ -79,9 +79,7 @@ $(document).ready(function(){
     animateDancing_Android;
 });
 
-// function randomize(){
-//
-// }
+
 
 function animateLollipop(){
     var newq = makeNewPosition();

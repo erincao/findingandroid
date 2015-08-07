@@ -53,8 +53,8 @@ p{
   width: 20px;
   height: 25px;
   position:relative;
-  top: 958px;
-  left: 1385px;
+  top: 400px;
+  left: 400px;
   z-index:1;
 }
 #android_level4{
@@ -140,9 +140,11 @@ p{
   z-index:1;
 }
 #air_balloon{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width:750px;
   height:500px;
-  margin: 0 auto;
   background-repeat: no-repeat;
   z-index:0;
 }
@@ -154,7 +156,16 @@ p{
   left: 20px;
   z-index:1;
 }
+/*#tokyo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  height: 540px;
+  background-repeat: no-repeat;
+  z-index:0;
 
+}*/
 
 .form{
   text-align: center;
@@ -168,7 +179,7 @@ p{
 }
 .nav{
   height: 40px;
-  width: 313px;
+  width: 188px;
   background-color: #BDBDBD;
   text-align: center;
 }
@@ -205,10 +216,17 @@ p{
   text-align: center;
 }
 .next_level_button{
+  font-size:100%;
+  color:red;
+  font-family: "Orbitron", Arial, serif;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width:200px;
+  height:60px;
+
 }
+
 .bglevel1{
   width: 736px;
   height: 616px;
@@ -224,24 +242,27 @@ p{
   background-repeat: no-repeat;
 }
 .bglevel3{
-  width: 1920px;
-  height: 1080px;
-  margin: 0 auto;
-  background-image: url("/images/level3.jpg");
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index:0;
+  width: 960px;
+  height: 540px;
+  background-image: url("/images/rsz_level3.jpg");
   background-repeat: no-repeat;
 }
 .bglevel4{
-  width: 2123px;
-  height: 1000px;
+  width: 1062px;
+  height: 670px;
   margin: 0 auto;
-  background-image: url("/images/level4.jpg");
+  background-image: url("/images/rsz_level4.jpg");
   background-repeat: no-repeat;
 }
 .bglevel5{
-  width: 1280px;
-  height: 1024px;
+  width: 960px;
+  height: 768px;
   margin: 0 auto;
-  background-image: url("/images/level5.jpg");
+  background-image: url("/images/rsz_level5.jpg");
   background-repeat: no-repeat;
 }
 .header{

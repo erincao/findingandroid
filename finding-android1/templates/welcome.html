@@ -13,7 +13,6 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about_us">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
     </div>
@@ -33,5 +32,12 @@
         <button id="submit" type="submit" value="Submit" style="width: 200px; height: 60px"><h1>Play</h1></button>
       </form>
     </div>
+
+<script>
+var p = $( "p:first" );
+var position = p.position();
+$( "p:last" ).text( "left: " + position.left + ", top: " + position.top );
+</script>
+
   </body>
 </html>
