@@ -53,24 +53,24 @@ p{
   width: 20px;
   height: 25px;
   position:relative;
-  top: 958px;
-  left: 1385px;
+  top: -61%;
+  left: 15%;
   z-index:1;
 }
 #android_level4{
   width: 20px;
   height: 25px;
   position:relative;
-  top: 250px;
-  left: 540px;
+  top: -50%;
+  left: 50%;
   z-index:1;
 }
 #android_level5{
   width: 20px;
   height: 25px;
   position:relative;
-  top: 420px;
-  left: 658px;
+  top: -50%;
+  left: 50%;
   z-index:1;
 }
 #lollipop{
@@ -81,7 +81,6 @@ p{
   left: 540px;
   z-index:1;
 }
-
 #flying_android{
   width: 50px;
   height: 75px;
@@ -90,7 +89,6 @@ p{
   left: 540px;
   z-index:1;
 }
-
 #android_superhero{
   width: 50px;
   height: 75px;
@@ -202,6 +200,11 @@ p{
   text-align: center;
 }
 .next_level_button{
+  font-family: "Orbitron", Arial, serif;
+  font-size: 25px;
+  color: red;
+  width: 200px;
+  height: 60px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -224,30 +227,31 @@ p{
   width: 1920px;
   height: 1080px;
   margin: 0 auto;
-  background-image: url("/images/level3.jpg");
   background-repeat: no-repeat;
+  background-size: contain;
 }
 .bglevel4{
   width: 2123px;
   height: 1000px;
   margin: 0 auto;
-  background-image: url("/images/level4.jpg");
   background-repeat: no-repeat;
 }
 .bglevel5{
   width: 1280px;
   height: 1024px;
   margin: 0 auto;
-  background-image: url("/images/level5.jpg");
   background-repeat: no-repeat;
 }
-/*.congratulations_images{
+.congratulations_images{
   width:;
   height:;
   margin: 0 auto;
   background-image: url("/images/congratz.jpg");
   background-repeat: no-repeat;
-}*/
+}
+.levelbg{
+  z-index: -1;
+}
 .header{
   text-align: center;
 }
