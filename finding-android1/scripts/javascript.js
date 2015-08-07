@@ -1,5 +1,14 @@
 var counter = 0;
 
+$(document).ready(function() {
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+    var randomTop = getRandomInt(50,550)
+    var randomLeft = getRandomInt(50,700)
+    $("img[id^='android_level']").css({'top' : randomTop, 'left' :randomLeft});
+});
+
 $(document).ready(function(){
   hide_n_show_1();
    $(".next_level_button").hide()

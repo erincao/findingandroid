@@ -295,7 +295,10 @@ body.welcomebody{
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.us{
+  width: 50%;
+  padding: 10px;
+}
 
 .congratulationsbody {
   padding-bottom: 35px;
